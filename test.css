@@ -1,0 +1,91 @@
+.card {
+    --bg-color: #2A265F;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: solid #2A265F 2px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    max-width: 350px;
+    min-width: 230px;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    color: white;
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11), 0 24px 46px var(--box-shadow-color);
+}
+
+.card:hover .overlay {
+    transform: scale(50) translateZ(0);
+}
+
+.card:hover .circle {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+}
+
+.overlay {
+    width: 15px;
+    position: absolute;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    z-index: 0;
+    top: 10px;
+    right: 5px;
+    transition: transform 0.3s ease-out;
+}
+
+@media screen and (max-width: 850px) {
+    .card {
+        max-width: 100%;
+    }
+}
+
+
+/*
+
+
+
+
+
+
+irr
+*/
+
+.card-text {
+    z-index: 3;
+}
+
+.card_conn {
+    max-width: 1000px;
+}
+
+.card-text h1 {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 30px;
+}
+
+.card-text p {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.img-logo {
+    background-image: url('public/img/index/plus.png');
+    height: 75px;
+    width: 75px;
+    background-size: cover;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    bottom: 0;
+}
